@@ -1,0 +1,114 @@
+#Homepage{
+    text-align: center;
+    padding: 30px 40px;
+    border-radius: 12px;
+    background: #fff;
+    text-align: center;
+}
+
+body{
+  background: rgb(142,177,220);
+  background: linear-gradient(90deg, rgba(142,177,220,1) 0%, rgba(68,137,212,1) 35%, rgba(41,155,212,1) 100%);
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main{
+  display: none;
+}
+
+.Showgamepage{
+    display: block;
+}
+
+.Showhomepage{
+    display: none;
+}
+
+.Showrespage{
+   display: none;
+}
+
+#startbtn{
+  margin-top: 20px;
+  width:150px;
+  height:50px;
+  border-radius: 6px;
+  background-color: #4a98f7;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  
+}
+
+#gamepage{
+  text-align: center;
+  padding: 30px 40px;
+  border-radius: 12px;
+  background: #fff;
+
+}
+
+#nextqus{
+  color:white;
+  font-size: 1.5em bold;
+  border-radius: 6px;
+  background-color: #04AA6D; 
+  width: 100px;
+  height:40px ;
+  margin-left: 40px;
+  margin-top: 20px;
+  cursor: pointer;
+  border: #fff;
+}
+
+#submitbtn{
+   width: 100px;
+   height: 40px;
+   background-color: #f44336;
+   color: white;
+   cursor: pointer;
+   text-align: center;
+   border-radius: 6px;
+   border: #fff;
+
+}
+
+#timer{
+  margin-left:120px;
+  margin-top: 40px;
+
+}
+
+#num1{
+  font-size: 20px;
+}
+
+
+#num2{
+  font-size: 20px;
+}
+
+#operator{
+  font-size: 20px;
+}
+
+#equalto{
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+#numinput{
+  padding-left: 10px;
+  margin-left: 5px;
+  width: 182px;
+  height: 20px;
+  margin-bottom: 2px;
+  font-size: 16px;
+}

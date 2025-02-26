@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Game</title>
+    <link rel="icon" type="image/x-icon" href="https://www.flaticon.com/free-icon/calculator_2374370">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div id="Homepage">
+        <h1 id="head">Welcome your number game webpage 🎮</h1>
+        <button id="startbtn" onclick="startedgame()">Start Game</button>
+    </div>
+</div>
+    <script src="script.js"></script>
+
+ 
+<div class="content">
+    <main id="gamepage">
+        <h2 id="gamehead">Calculate Numbers</h2>
+
+        <span id="score ">
+            Score:<span id="scoreValue">0</span>
+        </span>
+
+        <br>
+        <br>
+        
+        <span id="num1">
+            
+        </span>
+        
+        <span id="operator">
+        
+        </span>
+        
+        <span  id="num2">
+            
+        </span >
+        
+        <span id="equalto">
+            
+        </span>
+          
+        <span id="numintputSpan">
+            <input type="number" id="numinput" placeholder="Enter a Number">
+        </span>
+        
+        <br>
+        <br>
+        <div>
+            <span >
+                <button id="submitbtn" onclick="showReslut()">Submit</button>
+            </span>
+            
+            <span>
+                <button id="nextqus" onclick="nextquestion()">Next >></button>
+            </span> 
+        </div>
+        <div >
+            <p id="timer"></p>
+        </div>
+    </main>
+</div>
+
+
+</body>
+</html>
