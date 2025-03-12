@@ -65,12 +65,12 @@ switch (operation) {
     case '-':
         reslut=(n1 - n2);  
         break;
-    // case 'X':
-    //     reslut=(n1 * n2);  
-    //     break;
-    // case '%':
-    //     reslut=Math.floor((n1 / n2) * 100) / 100;  
-    //     break;
+    case 'X':
+        reslut=(n1 * n2);  
+        break;
+    case '%':
+        reslut=Math.floor((n1 / n2) * 100) / 100;  
+        break;
  
 }
 
