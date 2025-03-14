@@ -1,20 +1,16 @@
 
-var score = 0;
+function playGame(){
 
 
-function startedgame(){
+    var home = document.getElementById("container");
+    home.classList.add("hiddenHomePage");
 
-    var start = document.getElementById("gamepage");
-    start.classList.add("Showgamepage");
-
-    var home = document.getElementById("Homepage");
-    home.classList.add("Showhomepage");
-
-   
+    var start = document.getElementById("content");
+    start.classList.add("showGamePage");
 
     var num1 = Math.floor(10+Math.random()*90);
 
-    const list = ["+","-"]; 
+    const list = ["+","-","X"]; 
     const randomElement = list[Math.floor(Math.random() * list.length)];
 
     
@@ -24,11 +20,10 @@ function startedgame(){
     document.getElementById("operator").innerHTML=randomElement;
     document.getElementById("num2").innerHTML = num2;
     document.getElementById("equalto").innerHTML="=";
-
-
 }
 
-    
+
+
 function showReslut(){
 
   
@@ -39,60 +34,45 @@ function showReslut(){
    var input = Number(document.getElementById("numinput").value);
 
    if(document.getElementById("numinput").value ===""){
-    alert("Input is empty!");
+    alert("Invalid is input!");
+    return;
    }
-
-//    var validInput = document.getElementById("numinput").value;
-//    var pattern = /^[0-9]/;
-   
-//    if(validInput.length>0){
-//     if (!pattern.test(validInput)) {
-//         alert("Invalid input");
-//    } 
-//    }
- 
   
-
    var operation = document.getElementById("operator").innerText;
-   var reslut = 0;
-
-
+   var result = 0;
 
 switch (operation) {
     case '+':
-       reslut = (n1 + n2);  
+       result = (n1 + n2);  
         break;
     case '-':
-        reslut=(n1 - n2);  
+        result =(n1 - n2);  
         break;
     case 'X':
-        reslut=(n1 * n2);  
-        break;
-    case '%':
-        reslut=Math.floor((n1 / n2) * 100) / 100;  
+        result =(n1 * n2);  
         break;
  
 }
-
-if(reslut===input){
+  let score=0;
+if(result ===input){
     score++;
     document.getElementById("scoreValue").innerHTML=score;
     
     document.getElementById("numinput").value = "";
-    startedgame();  
+    playGame();
 }
 
 else{
-    alert("Wrong Answer");
+    checkAnswer(input, result)
 }
 
 
 }
+
 
 function nextquestion(){
 
-
-    startedgame();
+    playGame();
     document.getElementById("numinput").value = "";
 
    
@@ -100,10 +80,26 @@ function nextquestion(){
 
 
 
+function removeHeart() {
+    const hearts = document.querySelectorAll('.heart-chance');
+    if (hearts.length > 0) {
+        hearts[hearts.length - 1].classList.add('remove');
+        setTimeout(() => {
+            hearts[hearts.length - 1].remove(); 
+        }, 300); 
+    }
 
+    if (hearts.length <= 1) {
+        alert("Game Over!");
+        location.reload();
+    }
+}
 
-
-
+function checkAnswer(userAnswer, correctAnswer) {
+    if (userAnswer !== correctAnswer) {
+        removeHeart();
+    }
+}
 
 
 
