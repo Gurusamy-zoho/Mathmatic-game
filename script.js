@@ -38,7 +38,7 @@ function showReslut(){
         title: 'Error',
         html: `Invalid Input`,
         icon: 'error',
-        confirmButtonText: 'Ok',
+        confirmButtonText: 'Done',
         timer: 3000,
         position: 'center',
         heightAuto: false,
