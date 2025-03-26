@@ -34,7 +34,21 @@ function showReslut(){
    var input = Number(document.getElementById("numinput").value);
 
    if(document.getElementById("numinput").value ===""){
-    alert("Invalid is input!");
+    Swal.fire({
+        title: 'Error',
+        html: `Invalid Input`,
+        icon: 'error',
+        confirmButtonText: 'Ok',
+        timer: 3000,
+        position: 'center',
+        heightAuto: false,
+        showClass: {
+            popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+            popup: 'animate__animated animate__fadeOutUp'
+        }
+    });
     return;
    }
   
@@ -90,8 +104,22 @@ function removeHeart() {
     }
 
     if (hearts.length <= 1) {
-        alert("Game Over!");
-        location.reload();
+        Swal.fire({
+            title: 'Game Over',
+            html: `You have no more chance`,
+            icon: 'info',
+            confirmButtonText: 'Ok',
+            timer: 3000,
+            position: 'center',
+            heightAuto: false,
+            showClass: {
+                popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__fadeOutUp'
+            }
+        });
+        location.reload(true);
     }
 }
 
